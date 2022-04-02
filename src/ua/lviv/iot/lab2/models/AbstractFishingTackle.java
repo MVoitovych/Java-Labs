@@ -30,4 +30,23 @@ public abstract class AbstractFishingTackle {
         return typeOfFishing;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public TypeOfFishing getTypeOfFishing() {
+        return typeOfFishing;
+    }
+
+    public void setTypeOfFishing(TypeOfFishing typeOfFishing) {
+        this.typeOfFishing = typeOfFishing;
+    }
 }

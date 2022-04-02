@@ -1,9 +1,17 @@
 package ua.lviv.iot.lab2.models;
 
 public class FishingRod extends AbstractFishingTackle {
-
     private float lengthInSm;
     private String materialType;
+
+
+    public void setLengthInSm(float lengthInSm) {
+        this.lengthInSm = lengthInSm;
+    }
+
+    public void setMaterialType(String materialType) {
+        this.materialType = materialType;
+    }
 
 
     public float getLengthInSm() {

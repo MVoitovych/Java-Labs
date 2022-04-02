@@ -10,12 +10,19 @@ public class FishingReel extends AbstractFishingTackle {
         this.maxLoadInKilo = maxLoadInKilo;
     }
 
-
     public float getLengthInM() {
         return lengthInM;
     }
 
+    public void setLengthInM(float lengthInM) {
+        this.lengthInM = lengthInM;
+    }
+
     public int getMaxLoadInKilo() {
         return maxLoadInKilo;
+    }
+
+    public void setMaxLoadInKilo(int maxLoadInKilo) {
+        this.maxLoadInKilo = maxLoadInKilo;
     }
 }
