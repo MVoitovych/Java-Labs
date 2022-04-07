@@ -3,8 +3,9 @@ package ua.lviv.iot.lab2.manager;
 import ua.lviv.iot.lab2.models.AbstractFishingTackle;
 import ua.lviv.iot.lab2.models.TypeOfFishing;
 import ua.lviv.iot.lab2.models.TypeOfSort;
-import java.util.LinkedList;
+
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class FishingTackleManager {
     private List<AbstractFishingTackle> tackles = null;
@@ -42,13 +43,11 @@ public class FishingTackleManager {
     }
 
     public List<AbstractFishingTackle> sortTackleByTypeOfFishing(TypeOfFishing neededType) {
-        List<AbstractFishingTackle> finalList = new LinkedList<>();
-        for (AbstractFishingTackle tackle : tackles) {
-            if (tackle.getType() == neededType) {
-                finalList.add(tackle);
-            }
-        }
-        return finalList;
+        /*tackles.forEach(tackle ->{
+            if (tackle.getType() == neededType) {finalList.add(tackle);}
+        });
+        запитати як краще*/
+        return tackles.stream().filter(tackle -> tackle.getType().equals(neededType)).collect(Collectors.toList());
     }
 
 }
