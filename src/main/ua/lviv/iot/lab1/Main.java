@@ -1,4 +1,4 @@
-package ua.lviv.iot.lab1;
+package main.ua.lviv.iot.lab1;
 
 
 
