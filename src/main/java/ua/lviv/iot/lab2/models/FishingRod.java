@@ -1,4 +1,4 @@
-package main.ua.lviv.iot.lab2.models;
+package ua.lviv.iot.lab2.models;
 
 public class FishingRod extends AbstractFishingTackle {
     private float lengthInSm;

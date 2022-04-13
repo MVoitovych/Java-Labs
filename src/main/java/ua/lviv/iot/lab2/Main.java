@@ -1,15 +1,14 @@
-package main.ua.lviv.iot.lab2;
+package ua.lviv.iot.lab2;
 
 
-import main.ua.lviv.iot.lab2.lab3.manager.FishingTackleManager;
-import main.ua.lviv.iot.lab2.models.*;
+import ua.lviv.iot.lab2.lab3.manager.FishingTackleManager;
+import ua.lviv.iot.lab2.models.*;
 
 import java.util.LinkedList;
 import java.util.List;
 
-
 public class Main {
-    public static void main(String... strings) {
+    public static void main(String[] args) {
 
         FishingRod fishingRod = new FishingRod("Vudochka", 1200.001f, 1, TypeOfFishing.LAKE, 600, "Bamboo");
         FishingReel string = new FishingReel("Zhylka", 1200.002f, 3, TypeOfFishing.LAKE, 50, 25);
@@ -49,5 +48,6 @@ public class Main {
         manager.sortTackleByPrice(TypeOfSort.DESCENDING).forEach(
                 tackle -> System.out.println(tackle.getName() + " " + tackle.getPrice()));
         System.out.println("------------------------");
+
     }
 }

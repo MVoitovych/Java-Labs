@@ -1,4 +1,4 @@
-package main.ua.lviv.iot.lab1;
+package ua.lviv.iot.lab1;
 
 public record Vase(float waterVolumeInLiters, float weight, int creationYear, int heightInSm, String materialType, String mainColour ) {
 
