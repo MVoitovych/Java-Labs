@@ -2,13 +2,13 @@ package ua.lviv.iot.lab2.models;
 
 public abstract class AbstractFishingTackle {
     protected String name;
-    protected float price;
+    protected float priceInUah;
     protected int amount;
     protected TypeOfFishing typeOfFishing;
 
     public AbstractFishingTackle(String name, float price, int amount, TypeOfFishing typeOfFishing) {
         this.name = name;
-        this.price = price;
+        this.priceInUah = price;
         this.amount = amount;
         this.typeOfFishing = typeOfFishing;
     }
@@ -18,8 +18,8 @@ public abstract class AbstractFishingTackle {
         return name;
     }
 
-    public float getPrice() {
-        return price;
+    public float getPriceInUah() {
+        return priceInUah;
     }
 
     public int getAmount() {
@@ -34,8 +34,8 @@ public abstract class AbstractFishingTackle {
         this.name = name;
     }
 
-    public void setPrice(float price) {
-        this.price = price;
+    public void setPriceInUah(float priceInUah) {
+        this.priceInUah = priceInUah;
     }
 
     public void setAmount(int amount) {

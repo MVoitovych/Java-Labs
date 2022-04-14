@@ -27,7 +27,7 @@ public class Main {
         TypeOfFishing neededType = TypeOfFishing.LAKE;
 
         System.out.println(neededType + " Type:");
-        manager.sortTackleByTypeOfFishing(neededType).forEach(
+        manager.findTackleByTypeOfFishing(neededType).forEach(
                 tackle -> System.out.println(tackle.getName() + " " + tackle.getType()));
         System.out.println("-------ASCENDING-------");
 
@@ -42,11 +42,11 @@ public class Main {
 
         System.out.println("Price:");
         manager.sortTackleByPrice(TypeOfSort.ASCENDING).forEach(
-                tackle -> System.out.println(tackle.getName() + " " + tackle.getPrice()));
+                tackle -> System.out.println(tackle.getName() + " " + tackle.getPriceInUah()));
         System.out.println("-------DESCENDING-------");
 
         manager.sortTackleByPrice(TypeOfSort.DESCENDING).forEach(
-                tackle -> System.out.println(tackle.getName() + " " + tackle.getPrice()));
+                tackle -> System.out.println(tackle.getName() + " " + tackle.getPriceInUah()));
         System.out.println("------------------------");
 
     }

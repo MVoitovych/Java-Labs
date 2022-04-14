@@ -20,10 +20,10 @@ public class FishingTackleManager {
     public List<AbstractFishingTackle> sortTackleByPrice(TypeOfSort type) {
         List<AbstractFishingTackle> finalList = tackles;
         if (type == TypeOfSort.ASCENDING) {
-            finalList.sort((o1, o2) -> Float.compare(o1.getPrice(), o2.getPrice()));
+            finalList.sort((o1, o2) -> Float.compare(o1.getPriceInUah(), o2.getPriceInUah()));
 
         } else if (type == TypeOfSort.DESCENDING) {
-            finalList.sort((o1, o2) -> -Float.compare(o1.getPrice(), o2.getPrice()));
+            finalList.sort((o1, o2) -> -Float.compare(o1.getPriceInUah(), o2.getPriceInUah()));
         }
 
         return finalList;
@@ -41,7 +41,7 @@ public class FishingTackleManager {
         return finalList;
     }
 
-    public List<AbstractFishingTackle> sortTackleByTypeOfFishing(TypeOfFishing neededType) {
+    public List<AbstractFishingTackle> findTackleByTypeOfFishing(TypeOfFishing neededType) {
 
         return tackles.stream().filter(tackle -> tackle.getType().equals(neededType)).collect(Collectors.toList());
     }
