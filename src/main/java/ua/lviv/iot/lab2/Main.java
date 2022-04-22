@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String... strings) {
 
         FishingRod fishingRod = new FishingRod("Vudochka", 1200.001f, 1, TypeOfFishing.LAKE, 600, "Bamboo");
         FishingReel string = new FishingReel("Zhylka", 1200.002f, 3, TypeOfFishing.LAKE, 50, 25);
