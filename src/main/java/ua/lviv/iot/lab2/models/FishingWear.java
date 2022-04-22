@@ -1,28 +1,17 @@
 package ua.lviv.iot.lab2.models;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class FishingWear extends AbstractFishingTackle {
-    private String materialType = null;
-    private boolean isWaterProof = false;
+    private String materialType ;
+    private boolean isWaterProof ;
 
     public FishingWear(String name, float price, int amount, TypeOfFishing typeOfFishing, String materialType, boolean isWaterProof) {
         super(name, price, amount, typeOfFishing);
         this.materialType = materialType;
         this.isWaterProof = isWaterProof;
-    }
-
-    public String getMaterialType() {
-        return materialType;
-    }
-
-    public void setMaterialType(String materialType) {
-        this.materialType = materialType;
-    }
-
-    public boolean isWaterProof() {
-        return isWaterProof;
-    }
-
-    public void setWaterProof(boolean waterProof) {
-        isWaterProof = waterProof;
     }
 }

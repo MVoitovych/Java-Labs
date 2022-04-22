@@ -1,3 +1,4 @@
+
 package ua.lviv.iot.lab2;
 
 
@@ -28,7 +29,7 @@ public class Main {
 
         System.out.println(neededType + " Type:");
         manager.findTackleByTypeOfFishing(neededType).forEach(
-                tackle -> System.out.println(tackle.getName() + " " + tackle.getType()));
+                tackle -> System.out.println(tackle.getName() + " " + tackle.getTypeOfFishing()));
         System.out.println("-------ASCENDING-------");
 
         System.out.println("Alphabet:");
@@ -51,3 +52,4 @@ public class Main {
 
     }
 }
+

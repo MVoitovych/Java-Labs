@@ -1,6 +1,7 @@
 package ua.lviv.iot.lab2.lab3.manager;
 
 
+import lombok.AllArgsConstructor;
 import ua.lviv.iot.lab2.models.AbstractFishingTackle;
 import ua.lviv.iot.lab2.models.TypeOfFishing;
 import ua.lviv.iot.lab2.models.TypeOfSort;
@@ -9,12 +10,9 @@ import ua.lviv.iot.lab2.models.TypeOfSort;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@AllArgsConstructor
 public class FishingTackleManager {
-    private List<AbstractFishingTackle> tackles = null;
-
-    public FishingTackleManager(List<AbstractFishingTackle> tackles) {
-        this.tackles = tackles;
-    }
+    private List<AbstractFishingTackle> tackles ;
 
 
     public List<AbstractFishingTackle> sortTackleByPrice(TypeOfSort type) {
@@ -43,7 +41,7 @@ public class FishingTackleManager {
 
     public List<AbstractFishingTackle> findTackleByTypeOfFishing(TypeOfFishing neededType) {
 
-        return tackles.stream().filter(tackle -> tackle.getType().equals(neededType)).collect(Collectors.toList());
+        return tackles.stream().filter(tackle -> tackle.getTypeOfFishing().equals(neededType)).collect(Collectors.toList());
     }
 
 }

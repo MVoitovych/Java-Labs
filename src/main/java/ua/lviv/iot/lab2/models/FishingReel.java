@@ -1,5 +1,11 @@
 package ua.lviv.iot.lab2.models;
 
+import lombok.Getter;
+import lombok.Setter;
+
+
+@Getter
+@Setter
 public class FishingReel extends AbstractFishingTackle {
     private float lengthInM;
     private int maxLoadInKilo;
@@ -10,19 +16,6 @@ public class FishingReel extends AbstractFishingTackle {
         this.maxLoadInKilo = maxLoadInKilo;
     }
 
-    public float getLengthInM() {
-        return lengthInM;
-    }
-
-    public void setLengthInM(float lengthInM) {
-        this.lengthInM = lengthInM;
-    }
-
-    public int getMaxLoadInKilo() {
-        return maxLoadInKilo;
-    }
-
-    public void setMaxLoadInKilo(int maxLoadInKilo) {
-        this.maxLoadInKilo = maxLoadInKilo;
-    }
 }
+
+

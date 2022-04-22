@@ -1,5 +1,10 @@
 package ua.lviv.iot.lab2.models;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class FishingBait extends AbstractFishingTackle {
 
     private boolean isAlive;
@@ -9,12 +14,4 @@ public class FishingBait extends AbstractFishingTackle {
         this.isAlive = isAlive;
     }
 
-
-    public boolean isAlive() {
-        return isAlive;
-    }
-
-    public void setAlive(boolean alive) {
-        isAlive = alive;
-    }
 }
