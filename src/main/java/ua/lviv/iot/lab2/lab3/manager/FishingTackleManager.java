@@ -1,30 +1,27 @@
-package ua.lviv.iot.lab2.manager;
+package ua.lviv.iot.lab2.lab3.manager;
 
+
+import lombok.AllArgsConstructor;
 import ua.lviv.iot.lab2.models.AbstractFishingTackle;
 import ua.lviv.iot.lab2.models.TypeOfFishing;
 import ua.lviv.iot.lab2.models.TypeOfSort;
 
+
 import java.util.List;
 import java.util.stream.Collectors;
 
+@AllArgsConstructor
 public class FishingTackleManager {
-    private List<AbstractFishingTackle> tackles = null;
-
-    public FishingTackleManager(List<AbstractFishingTackle> tackles) {
-        this.tackles = tackles;
-    }
+    private List<AbstractFishingTackle> tackles ;
 
 
     public List<AbstractFishingTackle> sortTackleByPrice(TypeOfSort type) {
         List<AbstractFishingTackle> finalList = tackles;
         if (type == TypeOfSort.ASCENDING) {
-            finalList.sort((o1, o2) -> {
-                return Float.compare(o1.getPrice(), o2.getPrice());
-            });
-
+            finalList.sort((o1, o2) -> Float.compare(o1.getPriceInUah(), o2.getPriceInUah()));
 
         } else if (type == TypeOfSort.DESCENDING) {
-            finalList.sort((o1, o2) -> -Float.compare(o1.getPrice(), o2.getPrice()));
+            finalList.sort((o1, o2) -> -Float.compare(o1.getPriceInUah(), o2.getPriceInUah()));
         }
 
         return finalList;
@@ -42,12 +39,9 @@ public class FishingTackleManager {
         return finalList;
     }
 
-    public List<AbstractFishingTackle> sortTackleByTypeOfFishing(TypeOfFishing neededType) {
-        /*tackles.forEach(tackle ->{
-            if (tackle.getType() == neededType) {finalList.add(tackle);}
-        });
-        запитати як краще*/
-        return tackles.stream().filter(tackle -> tackle.getType().equals(neededType)).collect(Collectors.toList());
+    public List<AbstractFishingTackle> findTackleByTypeOfFishing(TypeOfFishing neededType) {
+
+        return tackles.stream().filter(tackle -> tackle.getTypeOfFishing().equals(neededType)).collect(Collectors.toList());
     }
 
 }
