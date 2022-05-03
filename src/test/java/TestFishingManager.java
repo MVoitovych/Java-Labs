@@ -26,8 +26,8 @@ public class TestFishingManager {
 
     @Test
     public void testAscendingSortTackleByPrice() throws Exception {
-        FishingTackleManager manager = new FishingTackleManager(createList());
-        List<AbstractFishingTackle> sortedList = manager.sortTackleByPrice(TypeOfSort.ASCENDING);
+        FishingTackleManager manager = new FishingTackleManager();
+        List<AbstractFishingTackle> sortedList = manager.sortTackleByPrice(TypeOfSort.ASCENDING, createList());
         for (int i = 0; i < sortedList.size() - 1 ; i++) {
             Assertions.assertTrue((sortedList.get(i).getPriceInUah() <= sortedList.get(i + 1).getPriceInUah()));
         }
@@ -35,8 +35,8 @@ public class TestFishingManager {
 
     @Test
     public void testDescendingSortTackleByPrice() throws Exception {
-        FishingTackleManager manager = new FishingTackleManager(createList());
-        List<AbstractFishingTackle> sortedList = manager.sortTackleByPrice(TypeOfSort.DESCENDING);
+        FishingTackleManager manager = new FishingTackleManager();
+        List<AbstractFishingTackle> sortedList = manager.sortTackleByPrice(TypeOfSort.DESCENDING, createList());
         for (int i = 0; i < sortedList.size() - 1; i++) {
             Assertions.assertTrue((sortedList.get(i).getPriceInUah() >= sortedList.get(i + 1).getPriceInUah()));
         }
@@ -44,8 +44,8 @@ public class TestFishingManager {
 
     @Test
     public void testAscendingSortTackleByAlphabet() throws Exception {
-        FishingTackleManager manager = new FishingTackleManager(createList());
-        List<AbstractFishingTackle> sortedList = manager.sortTackleByAlphabet(TypeOfSort.ASCENDING);
+        FishingTackleManager manager = new FishingTackleManager();
+        List<AbstractFishingTackle> sortedList = manager.sortTackleByAlphabet(TypeOfSort.ASCENDING, createList());
         for (int i = 0; i < sortedList.size() - 1; i++) {
             Assertions.assertTrue(sortedList.get(i).getName().compareTo(sortedList.get(i + 1).getName()) <= 0);
         }
@@ -53,8 +53,8 @@ public class TestFishingManager {
 
     @Test
     public void testDescendingSortTackleByAlphabet() throws Exception {
-        FishingTackleManager manager = new FishingTackleManager(createList());
-        List<AbstractFishingTackle> sortedList = manager.sortTackleByAlphabet(TypeOfSort.DESCENDING);
+        FishingTackleManager manager = new FishingTackleManager();
+        List<AbstractFishingTackle> sortedList = manager.sortTackleByAlphabet(TypeOfSort.DESCENDING, createList());
         for (int i = 0; i < sortedList.size() - 1; i++) {
             Assertions.assertTrue(sortedList.get(i).getName().compareTo(sortedList.get(i + 1).getName()) >= 0);
         }
@@ -62,8 +62,8 @@ public class TestFishingManager {
 
     @Test
     public void testFindTackleByTypeOfFishing() throws Exception {
-        FishingTackleManager manager = new FishingTackleManager(createList());
+        FishingTackleManager manager = new FishingTackleManager();
         TypeOfFishing type = TypeOfFishing.LAKE;
-        manager.findTackleByTypeOfFishing(type).forEach(tackle -> Assertions.assertEquals(tackle.getTypeOfFishing(), type));
+        manager.findTackleByTypeOfFishing(type, createList()).forEach(tackle -> Assertions.assertEquals(tackle.getTypeOfFishing(), type));
     }
 }

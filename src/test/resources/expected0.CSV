@@ -1,0 +1,8 @@
+name,priceInUah,amount,TypeOfFishing,lengthInSm,materialType
+Vudochka,1200.001,1,LAKE,600.0,Bamboo
+name,priceInUah,amount,TypeOfFishing,lengthInM,maxLoadInKilo
+Zhylka,1200.002,3,LAKE,50.0,25
+name,priceInUah,amount,TypeOfFishing,materialType,isWaterProof
+Gumaky,300.0,50,RIVER,Rubber,true
+name,priceInUah,amount,TypeOfFishing,isAlive
+Chervyak,2.5,500,RIVER,true

@@ -1,5 +1,6 @@
 package ua.lviv.iot.lab2.lab6.writer;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import ua.lviv.iot.lab2.models.*;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+@SuppressFBWarnings("DM_DEFAULT_ENCODING")
 class FishingTackleWriterTest {
     List<AbstractFishingTackle> createDifferentClassesList() {
         List<AbstractFishingTackle> objList = new LinkedList<>();
