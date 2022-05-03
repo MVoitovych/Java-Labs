@@ -14,4 +14,14 @@ public class FishingRod extends AbstractFishingTackle {
         this.lengthInSm = lengthInSm;
         this.materialType = materialType;
     }
+
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + "," + "lengthInSm,materialType";
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + "," + lengthInSm + "," + materialType;
+    }
 }

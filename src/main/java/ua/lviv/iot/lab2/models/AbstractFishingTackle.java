@@ -19,4 +19,12 @@ public abstract class AbstractFishingTackle {
         this.amount = amount;
         this.typeOfFishing = typeOfFishing;
     }
+
+    public String getHeaders() {
+        return "name,priceInUah,amount,TypeOfFishing";
+    }
+
+    public String toCSV() {
+        return name + "," + priceInUah + "," + amount + "," + typeOfFishing;
+    }
 }

@@ -14,4 +14,13 @@ public class FishingBait extends AbstractFishingTackle {
         this.isAlive = isAlive;
     }
 
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + "," + "isAlive";
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + "," + isAlive;
+    }
 }
