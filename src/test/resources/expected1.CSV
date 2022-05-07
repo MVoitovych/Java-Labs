@@ -1,0 +1,8 @@
+name,priceInUah,amount,TypeOfFishing,lengthInSm,materialType
+Vudochka,1200.001,1,LAKE,700.0,Bamboo
+name,priceInUah,amount,TypeOfFishing,lengthInSm,materialType
+Vudochka2,1200.1,1,WINTER,800.0,Steel
+name,priceInUah,amount,TypeOfFishing,lengthInSm,materialType
+Vudochka3,1200.2,1,SEA,100.0,Rubber
+name,priceInUah,amount,TypeOfFishing,lengthInSm,materialType
+Vudochka4,1200.3,1,LAKE,200.0,Carbon

@@ -16,6 +16,15 @@ public class FishingReel extends AbstractFishingTackle {
         this.maxLoadInKilo = maxLoadInKilo;
     }
 
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + "," + "lengthInM,maxLoadInKilo";
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + "," + lengthInM + "," + maxLoadInKilo;
+    }
 }
 
 
