@@ -3,7 +3,6 @@ import org.junit.jupiter.api.Test;
 import ua.lviv.iot.lab2.lab3.manager.FishingTackleManager;
 import ua.lviv.iot.lab2.models.*;
 
-import java.lang.management.ManagementFactory;
 import java.util.LinkedList;
 import java.util.List;
 

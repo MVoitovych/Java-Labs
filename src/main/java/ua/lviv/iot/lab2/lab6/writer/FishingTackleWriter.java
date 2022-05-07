@@ -12,20 +12,24 @@ public class FishingTackleWriter {
 
     public void writeToFile(List<AbstractFishingTackle> tackle, String fileName) {
         if (!tackle.isEmpty()) {
-            try {
-                File file = new File(fileName);
+            File file = new File(fileName);
+            try (PrintWriter pw = new PrintWriter(file)) {
+
                 if (!file.exists()) {
                     if (file.createNewFile()) {
-                        PrintWriter pw = new PrintWriter(file);
-                        tackle.forEach(tac -> {
-                            pw.println(tac.getHeaders());
-                            pw.println(tac.toCSV());
-                        });
-                        pw.close();
+                        System.out.println("File created");
                     }
+
+                } else {
+
+                    tackle.forEach(tac -> {
+                        pw.println(tac.getHeaders());
+                        pw.println(tac.toCSV());
+                    });
                 }
+
             } catch (IOException e) {
-                System.out.println("Error: " + e);
+                System.out.println("Exeption :" + e);
             }
         }
     }
