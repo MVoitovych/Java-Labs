@@ -40,8 +40,8 @@ class FishingTackleWriterTest {
     @Test
     void writeDifferentClassesToFile() {
         try {
-            Path expectedFilePath = Paths.get("src" + sep + "test" + sep + "resources" + sep + "expected0.CSV");
-            String testedFileName = "differentClassesDataFile.CSV";
+            Path expectedFilePath = Paths.get("src" + sep + "test" + sep + "resources" + sep + "expected0.csv");
+            String testedFileName = "differentClassesDataFile.csv";
             FishingTackleWriter writer = new FishingTackleWriter();
             writer.writeToFile(createDifferentClassesList(), testedFileName);
             File expected = new File(String.valueOf(expectedFilePath));
@@ -65,9 +65,9 @@ class FishingTackleWriterTest {
 
     @Test
     void writeSameClassesToFile() {
-        Path expectedFilePath = Paths.get("src" + sep + "test" + sep + "resources" + sep + "expected1.CSV");
+        Path expectedFilePath = Paths.get("src" + sep + "test" + sep + "resources" + sep + "expected1.csv");
         try {
-            String testedFileName = "sameClassesDataFile.CSV";
+            String testedFileName = "sameClassesDataFile.csv";
             FishingTackleWriter writer = new FishingTackleWriter();
             writer.writeToFile(createSameClassesList(), testedFileName);
             File expected = new File(String.valueOf(expectedFilePath));
@@ -93,7 +93,7 @@ class FishingTackleWriterTest {
     @Test
     void writeEmptyListToFile() {
         try {
-            String testedFileName = "emptyClassesDataFile.CSV";
+            String testedFileName = "emptyClassesDataFile.csv";
 
             FishingTackleWriter writer = new FishingTackleWriter();
             writer.writeToFile(new ArrayList<AbstractFishingTackle>(), testedFileName);
